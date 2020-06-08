@@ -1,0 +1,15 @@
+{
+    "name": "🔥🔥 Scroll Out Demo 🔥🔥",
+    "short_name": "🔥🔥 Scroll Out Demo 🔥🔥",
+    "lang": "en-US",
+    "start_url": "/",
+    "display": "standalone",
+    "theme_color": "#3c65ec",
+    "background_color":"#60c166",
+    "icons": [
+      {
+        "src": "logo-512.png",
+        "sizes": "512x512"
+      }
+    ]
+  }

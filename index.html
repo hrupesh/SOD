@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Scroll Out Demo</title>
+        <link rel="shortcut icon" href="logo-512.png" type="image/x-icon">
+        <link rel="manifest" href="./manifest.json">
+        <link rel="stylesheet" href="./css/style.css">
+        <link rel="stylesheet" href="./css/animate.css"/>
+
+        <meta name="mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="application-name" content="🔥🔥 Scroll Out Demo 🔥🔥">
+        <meta name="apple-mobile-web-app-title" content="🔥🔥 Scroll Out Demo 🔥🔥">
+        <meta name="theme-color" content="#3c65ec">
+        <meta name="msapplication-navbutton-color" content="#3c65ec">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+        <meta name="msapplication-starturl" content="/">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+        <link rel="icon" sizes="512x512" href="logo-512">
+        <link rel="apple-touch-icon" sizes="512x512" href="logo-512">
+    </head>
+    <body>
+
+        <div data-scroll>
+            <h1 data-scroll>Hello Scroll</h1>
+            <p data-scroll>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem dolorum impedit architecto tempora ipsa laudantium dolores! Dolorum, aliquid. Veniam ab reprehenderit illo aliquid laborum mollitia iure fuga. Et, autem voluptate.
+            </p>
+        </div>
+
+        <div>
+            <h1 data-scroll>Hello Scroll</h1>
+            <p data-scroll>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem dolorum impedit architecto tempora ipsa laudantium dolores! Dolorum, aliquid. Veniam ab reprehenderit illo aliquid laborum mollitia iure fuga. Et, autem voluptate.
+            </p>
+        </div>
+
+        <div data-scroll>
+            <h1 data-scroll>Hello Scroll</h1>
+            <p data-scroll>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem dolorum impedit architecto tempora ipsa laudantium dolores! Dolorum, aliquid. Veniam ab reprehenderit illo aliquid laborum mollitia iure fuga. Et, autem voluptate.
+            </p>
+        </div>
+
+        <div>
+            <h1 data-scroll>Hello Scroll</h1>
+            <p data-scroll>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem dolorum impedit architecto tempora ipsa laudantium dolores! Dolorum, aliquid. Veniam ab reprehenderit illo aliquid laborum mollitia iure fuga. Et, autem voluptate.
+            </p>
+        </div>
+
+
+        <script src="./js/scroll-out.js"></script>
+        <script>
+            ScrollOut({
+                onShown(el) {
+                    el.classList.add("animate__animated");
+                    el.classList.add("animate__rubberBand");
+                },
+                onHidden: function (el) {
+                    el.classList.remove("animate__animated");
+                    el.classList.remove("animate__rubberBand");
+                },
+                onChange: function (el) {
+                    el.classList.remove("animate__animated");
+                    el.classList.remove("animate__rubberBand");
+                }
+            });
+        </script>
+        <script src="./sw.js"></script>
+        <script>
+            if ('serviceWorker' in navigator) {
+                navigator.serviceWorker.register('/sw.js');
+            }
+        </script>
+    </body>
+</html>
